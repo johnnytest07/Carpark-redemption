@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <thead>
+        <tr>
+          <th>Date of Purchase</th>
+          <th>Store ID</th>
+          <th>Price of Order</th>
+          <th>Payment Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in transaction_history %}
+        <tr>
+          <td>{{ item.date_of_purchase }}</td>
+          <td>{{ item.storeID }}</td>
+          <td>{{ item.price_of_order }}</td>
+          <td>{{ item.payment_method }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <h1>Heading</h1>
+  <p>This is a paragraph.</p>
+  <form action="/trans/submit" method="post">
+    {% csrf_token %}
+    <label for="number1">Number 1:</label>
+    <input type="number" id="number1" name="number1" required>
+    <br>
+    <label for="number2">Number 2:</label>
+    <input type="number" id="number2" name="number2" required>
+    <br>
+    <label for="number3">Number 3:</label>
+    <input type="number" id="number3" name="number3" required>
+    <br>
+    <label for="number4">Number 4:</label>
+    <input type="number" id="number4" name="number4" required>
+    <br>
+    <label for="number5">Number 5:</label>
+    <input type="number" id="number5" name="number5" required>
+    <br>
+    <label for="number6">Number 6:</label>
+    <input type="number" id="number6" name="number6" required>
+    <br>
+    <label for="number7">Number 7:</label>
+    <input type="number" id="number7" name="number7" required>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
